@@ -7,7 +7,7 @@ let urldb;
 if(process.env.NODE_ENV === 'dev'){
     urldb = 'mongodb://localhost:27017/test';
 }else{
-    urldb = 'mongodb+srv://giovanny:nigro12345@cluster0-wavfn.mongodb.net/test?retryWrites=true';
+    urldb = process.env.MONGO_URL;
 }
 
 process.env.urldb = urldb;
